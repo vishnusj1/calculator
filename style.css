@@ -1,0 +1,151 @@
+@font-face {
+    font-family: DMSans;
+    src: url(fonts/DMSans-Regular.ttf);
+}
+
+:root {
+    --navy: #0a192f;
+    --font-size-h1: 6rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2rem;
+    --font-size-h4: 1.35rem;
+    --font-size-text: 1.15rem;
+    --border-radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+/* Set core body defaults */
+
+body {
+    font-family: DMSans;
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+    color: white;
+    background-color: var(--navy);
+}
+
+
+/* Make images easier to work with */
+
+img {
+    min-height: 100vh;
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+.calc-wrapper {
+    font-size: var(--font-size-text);
+    content: '';
+    background-color: black;
+    height: 600px;
+    width: 350px;
+    border: 2px solid snow;
+}
+
+.calc-display {
+    height: 200px;
+    background-color: #444c57;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calc-title {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.calc-result {
+    font-size: var(--font-size-h3);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+.calc-operation-wrapper {
+    height: 400px;
+    padding: 10px 5px;
+    display: flex;
+}
+
+.calc-operands {
+    flex: 2;
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #444c57;
+    opacity: 0.8;
+}
